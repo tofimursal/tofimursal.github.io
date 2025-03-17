@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: row; /* Đổi sang bố cục ngang */
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 12px;
+            width: 700px; /* Tăng chiều rộng */
+            max-width: 90%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+            gap: 40px; /* Khoảng cách giữa các phần */
+        }
+
+        .contact-info {
+            flex: 1; /* Chiếm 1 phần không gian */
+        }
+
+        .contact-info h1 {
+            color: #B1D4E0;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #D9E7F0;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: #B1D4E0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            flex: 1; /* Chiếm 1 phần không gian */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid #B1D4E0;
+            border-radius: 8px;
+            padding: 12px;
+            color: #ffffff;
+            font-size: 1em;
+            outline: none;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #D9E7F0;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .contact-form button {
+            background-color: #2A5298;
+            border: none;
+            color: #ffffff;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 8px;
+            align-self: flex-end; /* Đặt nút ở góc phải */
+            position: static; /* Bỏ position absolute */
+        }
+
+        .contact-form button:hover {
+            background-color: #3E7CB1;
+        }
+    </style>
+    <script>
+        function showMessage() {
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (email && message) {
+                alert("Thank you for contacting us! We will respond as soon as possible.");
+            } else {
+                alert("Please fill in all fields before submitting.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h1>Contact Us</h1>
+            <p>Email: <a href="mailto:tofimursal@gmail.com">tofimursal@gmail.com</a></p>
+        </div>
+        <div class="contact-form">
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <textarea id="message" placeholder="Enter Message" required></textarea>
+            <button type="button" onclick="showMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
