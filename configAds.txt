@@ -1,3 +1,5 @@
 {
-"keysData": "sdfsdfsfsfsfsd"
+"alovinAps": "aHR0cHM6Ly9zaGFyYWNlLm9ubGluZQ==",
+"key_banner_details": "aHR0cHM6Ly9mbHVycnkuaW5mby9l",
+"ads_mod_keys": "admob"
 }
